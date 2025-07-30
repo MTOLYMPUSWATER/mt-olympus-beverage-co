@@ -2,17 +2,18 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Brain, Waves, Flame, Heart, Shield } from "lucide-react";
-import zeusBottle from "@/assets/zeus-bottle.jpg";
-import athenaBottle from "@/assets/athena-bottle.jpg";
-import poseidonBottle from "@/assets/poseidon-bottle.jpg";
+import zeusBottle from "@/assets/zeus-can.png";
+import athenaBottle from "@/assets/athena-can.png";
+import poseidonBottle from "@/assets/poseidon-can.png";
+import hadesBottle from "@/assets/hades-can.png";
 
 const products = [
   {
     id: "zeus",
     name: "Zeus",
-    subtitle: "Focused Power",
-    benefits: ["Caffeine + B12", "Enhanced Focus", "Lightning Energy"],
-    color: "from-blue-500 to-yellow-400",
+    subtitle: "Caffeine + B15",
+    benefits: ["Enhanced Energy", "Mental Focus", "Lightning Power"],
+    color: "from-blue-600 to-blue-400",
     icon: Zap,
     image: zeusBottle,
     price: "$4.99"
@@ -20,9 +21,9 @@ const products = [
   {
     id: "athena",
     name: "Athena",
-    subtitle: "Wisdom Water",
-    benefits: ["Nootropics", "Mental Clarity", "Cognitive Boost"],
-    color: "from-purple-500 to-silver",
+    subtitle: "Focus + Lions Mane",
+    benefits: ["Cognitive Enhancement", "Mental Clarity", "Wisdom Boost"],
+    color: "from-blue-400 to-cyan-300",
     icon: Brain,
     image: athenaBottle,
     price: "$4.99"
@@ -30,9 +31,9 @@ const products = [
   {
     id: "poseidon",
     name: "Poseidon",
-    subtitle: "Pure Endurance",
-    benefits: ["Electrolytes", "Hydration+", "Sea Minerals"],
-    color: "from-blue-600 to-cyan-400",
+    subtitle: "Electrolytes",
+    benefits: ["Hydration+", "Sea Minerals", "Endurance Power"],
+    color: "from-teal-600 to-teal-400",
     icon: Waves,
     image: poseidonBottle,
     price: "$4.99"
@@ -40,32 +41,32 @@ const products = [
   {
     id: "hades",
     name: "Hades",
-    subtitle: "Recovery Dark",
-    benefits: ["Post-Workout", "Muscle Recovery", "Dark Berries"],
-    color: "from-red-600 to-black",
+    subtitle: "Magnesium + Calm",
+    benefits: ["Relaxation", "Sleep Support", "Recovery"],
+    color: "from-slate-800 to-slate-600",
     icon: Flame,
-    image: zeusBottle, // Placeholder
+    image: hadesBottle,
     price: "$4.99"
   },
   {
-    id: "aphrodite",
-    name: "Aphrodite",
-    subtitle: "Beauty Elixir",
-    benefits: ["Collagen", "Antioxidants", "Radiant Glow"],
-    color: "from-pink-400 to-rose-300",
-    icon: Heart,
-    image: athenaBottle, // Placeholder
-    price: "$4.99"
+    id: "okeanos",
+    name: "Okeanos",
+    subtitle: "Sparkling Water",
+    benefits: ["Pure Bubbles", "Refreshing", "Zero Calories"],
+    color: "from-blue-700 to-blue-500",
+    icon: Waves,
+    image: zeusBottle, // Will use later
+    price: "$3.99"
   },
   {
-    id: "apollo",
-    name: "Apollo",
-    subtitle: "Immunity Shield",
-    benefits: ["Vitamin C", "Zinc", "Immune Support"],
-    color: "from-orange-400 to-yellow-300",
+    id: "theia",
+    name: "Theia",
+    subtitle: "Still Water",
+    benefits: ["Pure Hydration", "Mineral Rich", "Titaness Power"],
+    color: "from-cyan-400 to-blue-300",
     icon: Shield,
-    image: poseidonBottle, // Placeholder
-    price: "$4.99"
+    image: athenaBottle, // Will use later
+    price: "$3.99"
   }
 ];
 

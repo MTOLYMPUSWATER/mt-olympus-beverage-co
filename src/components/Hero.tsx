@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Zap, Crown, ShoppingCart } from "lucide-react";
-import olympusCollection from "@/assets/olympus-collection.jpg";
-import zeusBottle from "@/assets/zeus-bottle.jpg";
+import pantheonCollection from "@/assets/pantheon-four-cans.png";
+import zeusBottle from "@/assets/zeus-can.png";
 
 const Hero = () => {
   return (
@@ -48,11 +48,11 @@ const Hero = () => {
             {/* Live Stats */}
             <div className="flex justify-center lg:justify-start gap-8 mt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">21,304</div>
-                <div className="text-sm text-muted-foreground">Bottles Delivered</div>
+                <div className="text-2xl font-bold text-primary">1,505,637</div>
+                <div className="text-sm text-muted-foreground">Bottles Sold</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">12</div>
+                <div className="text-2xl font-bold text-primary">6</div>
                 <div className="text-sm text-muted-foreground">Divine Flavors</div>
               </div>
               <div className="text-center">
@@ -66,7 +66,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative">
               <img
-                src={olympusCollection}
+                src={pantheonCollection}
                 alt="Mt Olympus Divine Collection"
                 className="w-full h-auto rounded-2xl shadow-2xl lightning-glow"
               />

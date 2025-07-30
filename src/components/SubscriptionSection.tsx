@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Check, Crown, Gift, Users, Package } from "lucide-react";
 
 const SubscriptionSection = () => {
-  const [bottleCount, setBottleCount] = useState(21304);
+  const [bottleCount, setBottleCount] = useState(1505637);
 
   // Simulate live bottle counter
   useEffect(() => {
@@ -17,32 +17,32 @@ const SubscriptionSection = () => {
 
   const plans = [
     {
-      name: "Mortal",
-      bottles: "6 bottles",
-      price: "$24.99",
-      originalPrice: "$29.94",
-      savings: "Save 17%",
-      features: ["Free shipping", "Cancel anytime", "Mix & match flavors"],
+      name: "Hero Pack",
+      bottles: "12 bottles",
+      price: "$45",
+      originalPrice: "$59.88",
+      savings: "Save 25%",
+      features: ["Free shipping", "Cancel anytime", "Mix & match flavors", "4 Zeus, 4 Poseidon, 2 Athena, 2 Hades"],
       popular: false,
       badge: "🌟"
     },
     {
-      name: "Hero",
+      name: "Zeus Only",
       bottles: "12 bottles", 
-      price: "$44.99",
+      price: "$48",
       originalPrice: "$59.88",
-      savings: "Save 25%",
-      features: ["Free shipping", "Cancel anytime", "Mix & match flavors", "Exclusive flavors", "Priority support"],
+      savings: "Save 20%",
+      features: ["Free shipping", "Cancel anytime", "Pure Zeus power", "Caffeine + B15", "Lightning focused"],
       popular: true,
       badge: "⚡"
     },
     {
-      name: "Olympian",
-      bottles: "24 bottles",
-      price: "$79.99", 
+      name: "Mythical Variety",
+      bottles: "12 bottles",
+      price: "$85", 
       originalPrice: "$119.76",
-      savings: "Save 33%",
-      features: ["Free shipping", "Cancel anytime", "Mix & match flavors", "Exclusive flavors", "Priority support", "Limited edition bottles", "God-tier rewards"],
+      savings: "Save 29%",
+      features: ["Free shipping", "Cancel anytime", "All flavors included", "Limited editions", "God-tier rewards", "Flex plan"],
       popular: false,
       badge: "👑"
     }
@@ -79,13 +79,13 @@ const SubscriptionSection = () => {
             <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium">
-                📦 {bottleCount.toLocaleString()} Bottles Delivered
+                📦 {bottleCount.toLocaleString()} Bottles Sold
               </span>
             </div>
             <div className="flex items-center gap-2 bg-card border border-border rounded-lg px-4 py-2">
               <Users className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium">
-                12,847 Happy Gods
+                15,247 Happy Gods
               </span>
             </div>
           </div>
@@ -191,6 +191,19 @@ const SubscriptionSection = () => {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Build Your Pantheon Quiz - matching the reference */}
+        <div className="mt-16 text-center">
+          <div className="max-w-2xl mx-auto">
+            <div className="mb-6">
+              <p className="text-sm text-primary font-medium mb-2">FIRST ACCESS TO LIMITED DROPS • SAVE 10% EACH MONTH • EARN</p>
+            </div>
+            
+            <Button className="btn-divine text-lg px-8 py-4 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-all duration-300">
+              BUILD YOUR PANTHEON QUIZ
+            </Button>
+          </div>
         </div>
       </div>
     </section>
