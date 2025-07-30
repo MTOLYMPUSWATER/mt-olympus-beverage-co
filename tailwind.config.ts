@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'olympus': ['Cinzel', 'serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +55,16 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Olympus Brand Colors
+				olympus: {
+					gold: 'hsl(var(--olympus-gold))',
+					'gold-dark': 'hsl(var(--olympus-gold-dark))',
+					blue: 'hsl(var(--olympus-blue))',
+					'blue-light': 'hsl(var(--olympus-blue-light))',
+					marble: 'hsl(var(--olympus-marble))',
+					'marble-dark': 'hsl(var(--olympus-marble-dark))',
+					shadow: 'hsl(var(--olympus-shadow))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Mt Olympus Design System - Ancient Greek Mythology Inspired
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Olympus Color Palette */
+    --background: 220 15% 6%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Divine Gold - Zeus Lightning */
+    --primary: 45 100% 50%;
+    --primary-foreground: 220 15% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Marble Stone */
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 220 15% 6%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Mythology */
+    --muted: 220 15% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Divine Accent - Electric Blue */
+    --accent: 210 100% 60%;
+    --accent-foreground: 220 15% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 45 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Olympus Extended Palette */
+    --olympus-gold: 45 100% 50%;
+    --olympus-gold-dark: 45 100% 35%;
+    --olympus-blue: 220 50% 20%;
+    --olympus-blue-light: 210 100% 60%;
+    --olympus-marble: 0 0% 90%;
+    --olympus-marble-dark: 0 0% 80%;
+    --olympus-shadow: 220 15% 3%;
+
+    /* Divine Gradients */
+    --gradient-divine: linear-gradient(135deg, hsl(var(--olympus-gold)), hsl(var(--olympus-gold-dark)));
+    --gradient-lightning: linear-gradient(45deg, hsl(var(--olympus-blue-light)), hsl(var(--olympus-gold)));
+    --gradient-marble: linear-gradient(180deg, hsl(var(--olympus-marble)), hsl(var(--olympus-marble-dark)));
+    --gradient-shadow: linear-gradient(180deg, transparent, hsl(var(--olympus-shadow)));
+
+    /* Divine Shadows */
+    --shadow-divine: 0 10px 40px -10px hsl(var(--olympus-gold) / 0.3);
+    --shadow-lightning: 0 0 30px hsl(var(--olympus-blue-light) / 0.4);
+    --shadow-deep: 0 20px 50px -15px hsl(var(--olympus-shadow) / 0.8);
+
+    /* Animations */
+    --transition-divine: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-lightning: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +129,78 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Divine Button Variants */
+  .btn-divine {
+    @apply bg-gradient-to-r from-primary to-amber-400 text-primary-foreground font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-marble {
+    @apply bg-gradient-to-r from-secondary to-slate-200 text-secondary-foreground font-semibold py-3 px-6 rounded-lg border border-border hover:shadow-lg transition-all duration-300;
+  }
+
+  /* Lightning Animation */
+  .lightning-glow {
+    @apply relative;
+  }
+  
+  .lightning-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg blur-xl opacity-0 transition-opacity duration-500;
+  }
+  
+  .lightning-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Greek Key Border */
+  .greek-border {
+    position: relative;
+  }
+  
+  .greek-border::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent;
+  }
+  
+  .greek-border::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent;
+  }
+
+  /* Floating Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Glow Pulse */
+  .glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow-pulse {
+    from { box-shadow: 0 0 20px hsl(var(--olympus-gold) / 0.3); }
+    to { box-shadow: 0 0 40px hsl(var(--olympus-gold) / 0.6), 0 0 60px hsl(var(--olympus-blue-light) / 0.3); }
+  }
+
+  /* Marble Texture */
+  .marble-bg {
+    background: linear-gradient(135deg, hsl(var(--olympus-marble)) 0%, hsl(var(--olympus-marble-dark)) 100%);
+    background-size: 200% 200%;
+    animation: marble-shift 8s ease-in-out infinite;
+  }
+  
+  @keyframes marble-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 }
