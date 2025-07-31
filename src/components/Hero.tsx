@@ -18,14 +18,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8 relative">
-            {/* Lightning Effects */}
-            <div className="absolute -top-4 -left-4 w-2 h-16 bg-gradient-to-b from-primary via-olympus-gold to-transparent opacity-0 animate-lightning-1"></div>
-            <div className="absolute top-8 -right-8 w-1 h-12 bg-gradient-to-b from-accent via-primary to-transparent opacity-0 animate-lightning-2"></div>
-            <div className="absolute top-16 left-1/2 w-1 h-20 bg-gradient-to-b from-olympus-gold via-primary to-transparent opacity-0 animate-lightning-3"></div>
-            
-            {/* Thunder Flash Overlay */}
-            <div className="absolute inset-0 bg-primary/10 opacity-0 animate-thunder-flash pointer-events-none"></div>
+          <div className="text-center lg:text-left space-y-8">
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
               <Crown className="w-8 h-8 text-primary" />
               <span className="text-primary font-olympus text-lg tracking-wider">MT OLYMPUS BEVERAGE CO</span>
