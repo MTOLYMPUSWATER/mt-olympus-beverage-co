@@ -89,6 +89,14 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        
+        {/* WaterAid Partnership */}
+        <div className="absolute bottom-8 right-8">
+          <div className="text-right text-sm text-muted-foreground">
+            <div className="font-medium">Proud Partners with</div>
+            <div className="font-bold text-primary">WaterAid</div>
+          </div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
