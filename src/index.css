@@ -203,4 +203,33 @@ All colors MUST be HSL.
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
   }
+
+  /* Storm Effects */
+  @keyframes lightning-strike {
+    0%, 90%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1; transform: scaleY(1.2); }
+    10% { opacity: 0.8; transform: scaleY(0.8); }
+  }
+
+  @keyframes thunder-flash {
+    0%, 95%, 100% { opacity: 0; }
+    2%, 8% { opacity: 0.3; }
+    5% { opacity: 0.1; }
+  }
+
+  .animate-lightning-1 {
+    animation: lightning-strike 4s infinite;
+  }
+
+  .animate-lightning-2 {
+    animation: lightning-strike 6s infinite 1.5s;
+  }
+
+  .animate-lightning-3 {
+    animation: lightning-strike 5s infinite 3s;
+  }
+
+  .animate-thunder-flash {
+    animation: thunder-flash 8s infinite;
+  }
 }
