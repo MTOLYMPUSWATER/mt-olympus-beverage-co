@@ -159,6 +159,11 @@ const AppleGiveaway = () => {
                             2nd
                           </div>
                         )}
+                        {index === 2 && (
+                          <div className="absolute -top-2 -left-2 bg-gradient-to-r from-secondary to-muted text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
+                            3rd
+                          </div>
+                        )}
                         {index === 3 && (
                           <div className="absolute -top-2 -left-2 bg-gradient-to-r from-secondary to-muted-foreground text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
                             4th
