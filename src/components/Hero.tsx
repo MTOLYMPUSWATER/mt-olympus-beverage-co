@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-8">
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
               <Crown className="w-8 h-8 text-primary" />
-              <span className="text-primary font-olympus text-lg tracking-wider">OLYMPUS</span>
+              <span className="text-primary font-olympus text-lg tracking-wider">MT OLYMPUS BEVERAGE CO</span>
             </div>
             
             <h1 className="font-olympus text-5xl lg:text-7xl font-bold leading-tight">
