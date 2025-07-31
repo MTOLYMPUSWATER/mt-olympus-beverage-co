@@ -154,6 +154,11 @@ const AppleGiveaway = () => {
                             1st
                           </div>
                         )}
+                        {index === 1 && (
+                          <div className="absolute -top-2 -left-2 bg-gradient-to-r from-accent to-secondary text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
+                            2nd
+                          </div>
+                        )}
                         <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                           <IconComponent className="w-8 h-8 text-primary" />
                         </div>
