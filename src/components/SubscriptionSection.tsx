@@ -166,7 +166,7 @@ const SubscriptionSection = () => {
 
                 {/* CTA Button */}
                 <Button 
-                  className={`w-full ${plan.popular ? "btn-divine" : "btn-marble"}`}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   Choose {plan.name}
                 </Button>
