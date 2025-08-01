@@ -6,6 +6,8 @@ import zeusBottle from "@/assets/zeus-can.png";
 import athenaBottle from "@/assets/athena-can.png";
 import poseidonBottle from "@/assets/poseidon-can.png";
 import hadesBottle from "@/assets/hades-can.png";
+import okeanosBottle from "@/assets/okeanos-can.png";
+import theiaBottle from "@/assets/theia-can.png";
 
 const products = [
   {
@@ -52,20 +54,20 @@ const products = [
     id: "okeanos",
     name: "Okeanos",
     subtitle: "Sparkling Water",
-    benefits: ["Pure Bubbles", "Refreshing", "Zero Calories"],
+    benefits: ["Pure Bubbles", "Ocean Minerals", "Zero Calories"],
     color: "from-blue-700 to-blue-500",
     icon: Waves,
-    image: zeusBottle, // Will use later
+    image: okeanosBottle,
     price: "$3.99"
   },
   {
     id: "theia",
     name: "Theia",
     subtitle: "Still Water",
-    benefits: ["Pure Hydration", "Mineral Rich", "Titaness Power"],
+    benefits: ["Pure Hydration", "Titaness Power", "Crystal Clear"],
     color: "from-cyan-400 to-blue-300",
     icon: Shield,
-    image: athenaBottle, // Will use later
+    image: theiaBottle,
     price: "$3.99"
   }
 ];
