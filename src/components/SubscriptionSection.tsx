@@ -6,6 +6,7 @@ import { Check, Crown, Gift, Users, Package } from "lucide-react";
 
 const SubscriptionSection = () => {
   const [bottleCount, setBottleCount] = useState(1505637);
+  const [spinningCard, setSpinningCard] = useState<number | null>(null);
 
   // Simulate live bottle counter
   useEffect(() => {
@@ -47,6 +48,14 @@ const SubscriptionSection = () => {
       badge: "👑"
     }
   ];
+
+  const handleCardClick = (index: number) => {
+    setSpinningCard(index);
+    // Reset after animation completes
+    setTimeout(() => {
+      setSpinningCard(null);
+    }, 2000);
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-card to-background relative overflow-hidden">
@@ -94,14 +103,22 @@ const SubscriptionSection = () => {
         {/* Subscription Plans */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <Card
+            <div
               key={index}
-              className={`relative border-2 transition-all duration-500 lightning-glow ${
-                plan.popular 
-                  ? "border-primary/50 bg-gradient-to-b from-primary/5 to-accent/5 scale-105" 
-                  : "border-border/50 hover:border-primary/30"
-              }`}
+              className="relative perspective-1000"
+              onClick={() => handleCardClick(index)}
             >
+              <Card
+                className={`relative border-2 transition-all duration-500 lightning-glow cursor-pointer ${
+                  spinningCard === index 
+                    ? "animate-fifa-spin transform-gpu" 
+                    : ""
+                } ${
+                  plan.popular 
+                    ? "border-primary/50 bg-gradient-to-b from-primary/5 to-accent/5 scale-105" 
+                    : "border-border/50 hover:border-primary/30"
+                }`}
+              >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold px-4 py-1">
@@ -160,6 +177,7 @@ const SubscriptionSection = () => {
                 </p>
               </CardContent>
             </Card>
+            </div>
           ))}
         </div>
 
