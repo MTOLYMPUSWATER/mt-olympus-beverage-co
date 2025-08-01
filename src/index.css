@@ -19,7 +19,7 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 95%;
 
     /* Divine Gold - Zeus Lightning */
-    --primary: 45 100% 50%;
+    --primary: 45 85% 45%;
     --primary-foreground: 220 15% 6%;
 
     /* Marble Stone */
@@ -44,8 +44,8 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Olympus Extended Palette */
-    --olympus-gold: 45 100% 50%;
-    --olympus-gold-dark: 45 100% 35%;
+    --olympus-gold: 45 85% 45%;
+    --olympus-gold-dark: 45 85% 30%;
     --olympus-blue: 220 50% 20%;
     --olympus-blue-light: 210 100% 60%;
     --olympus-marble: 0 0% 90%;
@@ -136,7 +136,7 @@ All colors MUST be HSL.
 @layer components {
   /* Divine Button Variants */
   .btn-divine {
-    @apply bg-gradient-to-r from-primary to-amber-400 text-primary-foreground font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-primary to-olympus-gold-dark text-primary-foreground font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
   }
   
   .btn-marble {
