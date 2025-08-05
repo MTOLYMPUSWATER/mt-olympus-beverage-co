@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Zap, Crown, ShoppingCart } from "lucide-react";
+import heroImage from "@/assets/ChatGPT Image Jul 31, 2025, 07_58_59 AM.png";
 
 const Hero = () => {
   return (
@@ -62,7 +63,11 @@ const Hero = () => {
 
           {/* Right Content - Product Showcase */}
           <div className="relative">
-            {/* Empty space for future content */}
+            <img 
+              src={heroImage} 
+              alt="Mt Olympus Beverage Co - Divine Hydration" 
+              className="w-full h-auto max-w-lg mx-auto rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
         
