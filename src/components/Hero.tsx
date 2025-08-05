@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Zap, Crown, ShoppingCart } from "lucide-react";
-import pantheonCollection from "@/assets/pantheon-four-cans.png";
-import zeusBottle from "@/assets/zeus-can.png";
 
 const Hero = () => {
   return (
@@ -64,29 +62,7 @@ const Hero = () => {
 
           {/* Right Content - Product Showcase */}
           <div className="relative">
-            <div className="relative">
-              <img
-                src={pantheonCollection}
-                alt="Mt Olympus Divine Collection"
-                className="w-full h-auto rounded-2xl shadow-2xl lightning-glow"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
-            </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-8 -right-8 bg-card border border-border rounded-lg p-4 shadow-lg glow-pulse">
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">Zeus: Focused Power</span>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-8 -left-8 bg-card border border-border rounded-lg p-4 shadow-lg glow-pulse delay-500">
-              <div className="flex items-center gap-2">
-                <Crown className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">Poseidon: Pure Endurance</span>
-              </div>
-            </div>
+            {/* Empty space for future content */}
           </div>
         </div>
         
